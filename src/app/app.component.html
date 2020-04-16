@@ -1,0 +1,9 @@
+<h1>Angular, Restify file upload</h1>
+<p>Select a file to upload. Upload will happen automatically.</p>
+<form (ngSubmit)="upload()">
+  <input type="file" id="file" multiple (change)="files($event.target.files)">
+  <button type="submit">Upload</button>
+</form>
+<p *ngIf="message">{{ message | json }}</p>
+<hr>
+<footer><small>Tamas Piros - <a href="http://fullstack-developer.academy">http://fullstack-developer.academy</a></small></footer>
